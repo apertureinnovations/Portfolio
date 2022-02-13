@@ -1,18 +1,32 @@
 <?php
 
-ini_set('display_errors',1);  
-error_reporting(E_ALL);
+require 'PHPMailerAutoload.php';
 
 $email_addr = $_POST["userEmailAddr"];
 $email_cont = $_POST["userEmailContents"];
-
-#validation
 $email_addr = filter_var($email_addr, FILTER_SANITIZE_EMAIL); 
 $email_cont = filter_var($email_cont, FILTER_SANITIZE_SPECIAL_CHARS);
 $headervalue = "From: $email_addr";
-$sent = mail("jakepalmer42@hotmail.com", $headervalue, $email_cont);
 
-if ($sent) {
+$mail = new PHPMailer;
+
+$mail->isSMTP();
+$mail->Host = "smtp.ionos.co.uk";
+$mail->SMTPAuth = true;
+$mail->Username = 'jake.palmer@apertureinnovations.co.uk';
+$mail->Password = 'Admin123pAsswordApertureinnovations';  
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587; 
+
+$mail->From = "$email_addr"
+$mail->FromName = 'Mailer';
+$mail->addAddress("$email_addr");
+$mail->addReplyTo('$jakepalmer42@hotmail.com', 'Info');
+$mail->WordWrap = 50;
+
+$mail->Subject = '$headervalue';
+$mail->Body    = '$email_cont';
+if ($mail->send()) {
 
   ?><html lang="en" dir="ltr">
   <head>
