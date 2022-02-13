@@ -10,7 +10,7 @@ function email_validation($data) {
 $email_addr = email_validation($email_addr);
 
 $headervalue = "From: $email_addr";
-$sent = mail("jake.palmer@apertureinnovations.co.uk", "Email From About Page", $email_cont, $headervalue);
+$sent = mail("jake.palmer@apertureinnovations.co.uk", $headervalue, $email_cont);
 
 if ($sent) {
 
