@@ -36,3 +36,17 @@ function showSources() {
   $("#sources").toggleClass("sources");
   window.scrollTo(0,document.body.scrollHeight);
 }
+
+var currentModalState = false;
+
+function modalOpenClose(number) {
+  var modalgroup = "#modal" + number;
+  if (currentModalState === false) {
+    currentModalState = true;
+    $(modalgroup).toggleClass("display-i-block");
+  } else {
+    currentModalState = false;
+    $(modalgroup).toggleClass("display-i-block");
+  }
+
+}
