@@ -1,6 +1,7 @@
 <?php
 
-require 'PHPMailerAutoload.php';
+use PHPMailer\PHPMailer\PHPMailer;
+require_once './vendor/autoload.php';
 
 $email_addr = $_POST["userEmailAddr"];
 $email_cont = $_POST["userEmailContents"];
@@ -8,7 +9,7 @@ $email_addr = filter_var($email_addr, FILTER_SANITIZE_EMAIL);
 $email_cont = filter_var($email_cont, FILTER_SANITIZE_SPECIAL_CHARS);
 $headervalue = "From: $email_addr";
 
-$mail = new PHPMailer;
+$mail = new PHPMailer();
 
 $mail->isSMTP();
 $mail->Host = "smtp.ionos.co.uk";
@@ -18,13 +19,13 @@ $mail->Password = 'Admin123pAsswordApertureinnovations';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587; 
 
-$mail->From = "$email_addr";
+$mail->setFrom = "$email_addr";
 $mail->FromName = 'Mailer';
 $mail->addAddress("jakepalmer42@hotmail.com");
-$mail->WordWrap = 50;
 
 $mail->Subject = '$headervalue';
-$mail->Body    = '$email_cont';
+$mail->isHTML(TRUE);
+$mail->Body = '$email_cont';
 if ($mail->send()) {
 
   ?><html lang="en" dir="ltr">
