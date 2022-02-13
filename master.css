@@ -323,6 +323,11 @@
   box-shadow: 0 0 2px rgba(0, 150, 190, 0.5);
 }
 
+
+.img-thumb-one {
+  height: auto;
+  width: 400px;
+}
 /* -------------------------------------------- */
 
 
@@ -350,6 +355,18 @@
 }
 .back-green {
   background: rgba(55,180,85,1);
+}
+.back-orange {
+  background-color: rgb(250, 110, 50);
+}
+.back-yellow {
+  background-color: rgb(200, 195, 5);
+}
+.back-purple {
+  background-color: rgb(170, 40, 240);
+}
+.back-lightblue {
+  background-color: rgb(122, 206, 244);
 }
 .text-light {
   color: rgba(247,247,247,1);
@@ -396,6 +413,18 @@
 
 /* a tag variables and buttons etc WORK IN PROGRESS*/
 /* -------------------------------------------- */
+
+.textButton {
+  cursor: pointer;
+  color: rgb(20, 20, 20);
+  text-decoration: none;
+}
+
+.textButton:hover {
+  cursor: pointer;
+  color: rgb(40, 40, 40);
+  text-decoration: none;
+}
 
 .button-large-blue {
   display: inline-block;
@@ -704,6 +733,9 @@
 .font-three {
   font-family: georgia;
 }
+.font-four {
+  font-family: 'Courier New', monospace;
+}
 .font-bold {
   font-weight: bold;
 }
@@ -727,7 +759,8 @@
   position: sticky;
   top: 0;
   background-color: rgb(70, 70, 70);
-  overflow: hidden;
+  overflow: auto;
+  z-index: 9999;
 }
 
 .navNavGroup {
@@ -798,6 +831,12 @@
   background-color: rgb(105, 80, 225);
 }
 
+.navDisabled {
+  cursor: not-allowed;
+  color: rgb(207, 207, 207);
+  pointer-events: none;
+}
+
 @media screen and (max-width: 900px) {
   .checkDisplay {
     display: none;
@@ -805,12 +844,9 @@
   .navHamBurger {
     display: inherit;
   }
-}
-
-.navDisabled {
-  cursor: not-allowed;
-  color: rgb(207, 207, 207);
-  pointer-events: none;
+  .navNavbar {
+    overflow: hidden;
+  }
 }
 
 /* -------------------------------------------- */
@@ -822,7 +858,7 @@
 
 .carouselContainer {
   width: 90%;
-  position: relative;
+  position:relative;
   margin: auto;
 }
 
@@ -883,10 +919,39 @@
 
 @media screen and (max-width: 1500px) {
   .carouselContainer {
-    width: 100%; 
+    width: 100%;
   }
 }
 /* -------------------------------------------- */
+
+
+
+/* FOOTER */
+/* -------------------------------------------- */
+
+.footerContainer {
+  position: relative;
+  bottom: 0;
+  width: 98%;
+  height: 100px;
+  margin: 1%;
+  padding: 1%;
+}
+
+.footerItems {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-around;
+  /* alternative idea, depends on how i want layout. may change to top later */
+  /* justify-content: space-between; */
+}
+
+.sources {
+  display: none;
+}
+
+/* -------------------------------------------- */
+
 
 
 /* KEYFRAMES */

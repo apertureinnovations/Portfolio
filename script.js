@@ -25,5 +25,14 @@ function showCurrentImage(value) {
   carouselItems[imageIndex-1].style.display = "block";
   // setTimeout(showCurrentImage, 10000);
 
+}
 
+function backToTop() {
+  $('html').animate({ scrollTop: 0 }, 'fast');
+  document.documentElement.scrollTop = 0;
+}
+
+function showSources() {
+  $("#sources").toggleClass("sources");
+  window.scrollTo(0,document.body.scrollHeight);
 }
