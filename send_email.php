@@ -1,39 +1,39 @@
-<?php
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+#<?php
+#
+#use PHPMailer\PHPMailer\PHPMailer;
+#use PHPMailer\PHPMailer\Exception;
 
 #require_once './vendor/autoload.php';
-require 'Exception.php';
-require 'PHPMailer.php';
-require 'SMTP.php';
+#require 'Exception.php';
+#require 'PHPMailer.php';
+#require 'SMTP.php';
 
-$email_addr = $_POST["userEmailAddr"];
-$email_cont = $_POST["userEmailContents"];
-$email_addr = filter_var($email_addr, FILTER_SANITIZE_EMAIL); 
-$email_cont = filter_var($email_cont, FILTER_SANITIZE_SPECIAL_CHARS);
-$headervalue = "From: $email_addr";
+#$email_addr = $_POST["userEmailAddr"];
+#$email_cont = $_POST["userEmailContents"];
+#$email_addr = filter_var($email_addr, FILTER_SANITIZE_EMAIL); 
+#$email_cont = filter_var($email_cont, FILTER_SANITIZE_SPECIAL_CHARS);
+#$headervalue = "From: $email_addr";
 
-$mail = new PHPMailer();
+#$mail = new PHPMailer();
 
-$mail->isSMTP();
-$mail->Host = "smtp.ionos.co.uk";
-$mail->SMTPAuth = true;
-$mail->Username = 'jake.palmer@apertureinnovations.co.uk';
-$mail->Password = '';  
-$mail->SMTPSecure = 'tls';
-$mail->Port = 587; 
+#$mail->isSMTP();
+#$mail->Host = "smtp.ionos.co.uk";
+#$mail->SMTPAuth = true;
+#$mail->Username = 'jake.palmer@apertureinnovations.co.uk';
+#$mail->Password = '';  
+#$mail->SMTPSecure = 'tls';
+#$mail->Port = 587; 
 
-$mail->setFrom = "$email_addr";
-$mail->FromName = 'Mailer';
-$mail->addAddress("jakepalmer42@hotmail.com");
+#$mail->setFrom = "$email_addr";
+#$mail->FromName = 'Mailer';
+#$mail->addAddress("jakepalmer42@hotmail.com");
 
-$mail->Subject = '$headervalue';
-$mail->isHTML(TRUE);
-$mail->Body = '$email_cont';
-if ($mail->send()) {
+#$mail->Subject = '$headervalue';
+#$mail->isHTML(TRUE);
+#$mail->Body = '$email_cont';
+#if ($mail->send()) {
 
-  ?><html lang="en" dir="ltr">
+  #?><!-- <html lang="en" dir="ltr">
   <head>
   <meta charset="utf-8">
   <title>Thank you!</title>
@@ -63,11 +63,12 @@ if ($mail->send()) {
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script type="text/javascript" src="scriptabout.js"></script>
   </body>
-  </html>
-  <?php
-} else {
-  echo 'Mailer Error: ' . $mail->ErrorInfo;
-  ?><html lang="en" dir="ltr">
+  </html> -->
+  #<?php
+#} else {
+  #echo 'Mailer Error: ' . $mail->ErrorInfo;
+  #?>
+  <html lang="en" dir="ltr">
   <head>
   <meta charset="utf-8">
   <title>Oops!</title>
@@ -98,8 +99,8 @@ if ($mail->send()) {
   <script type="text/javascript" src="scriptabout.js"></script>
   </body>
   </html>
-  <?php
-}
-$mail->clearAddresses();
-$mail->smtpClose();
-?>
+  #<?php
+#}
+#$mail->clearAddresses();
+#$mail->smtpClose();
+#?>
