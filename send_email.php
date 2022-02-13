@@ -1,7 +1,12 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
-require_once './vendor/autoload.php';
+use PHPMailer\PHPMailer\Exception;
+
+#require_once './vendor/autoload.php';
+require '/Exception.php';
+require '/PHPMailer.php';
+require '/SMTP.php';
 
 $email_addr = $_POST["userEmailAddr"];
 $email_cont = $_POST["userEmailContents"];
