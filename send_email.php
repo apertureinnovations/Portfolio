@@ -20,8 +20,7 @@ $mail->Port = 587;
 
 $mail->From = "$email_addr"
 $mail->FromName = 'Mailer';
-$mail->addAddress("$email_addr");
-$mail->addReplyTo('$jakepalmer42@hotmail.com', 'Info');
+$mail->addAddress("jakepalmer42@hotmail.com");
 $mail->WordWrap = 50;
 
 $mail->Subject = '$headervalue';
