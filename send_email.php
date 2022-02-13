@@ -100,4 +100,6 @@ if ($mail->send()) {
   </html>
   <?php
 }
+$mail->clearAddresses();
+$mail->smtpClose();
 ?>
