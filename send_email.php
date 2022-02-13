@@ -6,14 +6,9 @@ error_reporting(E_ALL);
 $email_addr = $_POST["userEmailAddr"];
 $email_cont = $_POST["userEmailContents"];
 
-function email_validation($data) {
-  $filteredchrs = '/[nr|!/<>^$%*&]+/';
-  $replacement = '';
-  return preg_replace($filteredchrs, $replacement, $data);
-}
-
-$email_addr = email_validation($email_addr);
-
+#validation
+$email_addr = filter_var($email_addr, FILTER_SANITIZE_EMAIL); 
+$email_cont = filter_var($email_cont, FILTER_SANITIZE_SPECIAL_CHARS);
 $headervalue = "From: $email_addr";
 $sent = mail("jake.palmer@apertureinnovations.co.uk", $headervalue, $email_cont);
 
