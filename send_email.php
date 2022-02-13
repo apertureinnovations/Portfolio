@@ -66,6 +66,7 @@ if ($mail->send()) {
   </html>
   <?php
 } else {
+  echo 'Mailer Error: ' . $mail->ErrorInfo;
   ?><html lang="en" dir="ltr">
   <head>
   <meta charset="utf-8">
