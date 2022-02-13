@@ -1,7 +1,9 @@
+
 $(".navHamBurger").click(function() {
   $(".navNavItem").toggleClass("navItemHamDown");
   $(".navNavGroup").toggleClass("checkDisplay");
   $(".navHamBurger").toggleClass("navHamBurgerDown");
+
 });
 
 

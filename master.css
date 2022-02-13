@@ -220,6 +220,13 @@
   content: "Upload Image";
 }
 
+.redShadowBottomRight {
+  box-shadow: 1px 1px rgb(185, 30, 30), 2px 2px rgb(180, 25, 25), 3px 3px rgb(170, 15, 15), 4px 4px rgb(160, 05, 05);
+}
+.blueShadowBottomRight {
+  box-shadow: 1px 1px rgb(25, 95, 200), 2px 2px rgb(20, 90, 195), 3px 3px rgb(10, 80, 185), 4px 4px rgb(0, 70, 175);
+}
+
 /* -------------------------------------------- */
 
 
@@ -412,6 +419,14 @@
 }
 .border-radius {
   border-radius: 0.25em;
+}
+
+.border-radius-extreme {
+  border-radius: 10%;
+}
+
+.border-notop-radius {
+  border-radius: 0 0 0.25em 0.25em;
 }
 /* -------------------------------------------- */
 
@@ -815,7 +830,7 @@
   height: 50px;
   font-size: 22px;
   padding: 10px;
-  color: rgb(247, 247, 247);
+  color: rgb(247, 247, 247) !important;
 }
 
 .navHamBurger:hover {
@@ -882,7 +897,6 @@
   padding: 25% 15px 15px 15px;
   width: auto;
   left: 0;
-  color: rgb(247, 247, 247) !important;
   border-radius: 0 3px 3px 0;
   font-size: 18px;
   transition: 0.5s ease;
@@ -897,7 +911,6 @@
   padding: 25% 15px 15px 15px;
   width: auto;
   right: 0;
-  color: rgb(247, 247, 247) !important;
   border-radius: 3px 0 0 3px;
   font-size: 18px;
   transition: 0.5s ease;
@@ -905,10 +918,11 @@
 
 .carouselLeftButton:hover, .carouselRightButton:hover {
   background-color: rgba(0,0,0,0.75);
+  color: rgb(247, 247, 247) !important;
 }
 
 .carouselCenterText {
-  background-color: rgba(247,247,247,0.75);
+  background-color: rgba(20,20,20,0.75);
   color: rgb(247, 247, 247);
   height: 10%;
   font-size: 14px;
@@ -923,7 +937,11 @@
   .carouselContainer {
     width: 100%;
   }
+  .small-two {
+    flex: 2 2 200px;
+  }
 }
+
 /* -------------------------------------------- */
 
 
