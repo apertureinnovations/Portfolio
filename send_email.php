@@ -6,9 +6,9 @@ error_reporting(E_ALL);
 $email_addr = $_POST["userEmailAddr"];
 $email_cont = $_POST["userEmailContents"];
 
-$filteredchrs = '/[nr|!/<>^$%*&]+/';
-$replacement = '';
 function email_validation($data) {
+  $filteredchrs = '/[nr|!/<>^$%*&]+/';
+  $replacement = '';
   return preg_replace($filteredchrs, $replacement, $data);
 }
 
