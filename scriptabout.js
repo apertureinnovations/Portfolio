@@ -30,3 +30,7 @@ function modalOpenClose(number) {
   }
 
 }
+
+$("#popuperror").click(function() {
+  alert("Sorry, That feature is unavailable. my email is jakepalmer42@hotmail.com.");
+});
