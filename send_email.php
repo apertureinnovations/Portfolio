@@ -20,7 +20,7 @@ $mail->isSMTP();
 $mail->Host = "smtp.ionos.co.uk";
 $mail->SMTPAuth = true;
 $mail->Username = 'jake.palmer@apertureinnovations.co.uk';
-$mail->Password = 'Admin123pAsswordApertureinnovations';  
+$mail->Password = '';  
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587; 
 
