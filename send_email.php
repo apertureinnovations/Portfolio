@@ -18,7 +18,7 @@ $mail->Password = 'Admin123pAsswordApertureinnovations';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587; 
 
-$mail->From = "$email_addr"
+$mail->From = "$email_addr";
 $mail->FromName = 'Mailer';
 $mail->addAddress("jakepalmer42@hotmail.com");
 $mail->WordWrap = 50;
