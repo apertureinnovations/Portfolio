@@ -108,10 +108,12 @@ function enterLetters() {
     rowIndex++
   } else if (rowIndex === 5) {
     for (i=0; i < 5; i++) {
+      var winCount = 0;
       if (currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text() === randomWordSplit[i]) {
         currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(55, 180, 85)","color":"white"});
         var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
         $(letter).css({"background-color":"rgb(55, 180, 85)","color":"white"});
+        winCount++
       } else if (randomWordSplit.includes(currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text()) === true) {
         currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(250, 110, 50)","color":"white"});
         var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
@@ -130,7 +132,11 @@ function enterLetters() {
         }
       }
     }
-    winCheck(0);
+    if (winCount === 5) {
+      winCheck(1);
+    } else {
+      winCheck(0);
+    }
   }
 }
 
