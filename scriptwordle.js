@@ -107,6 +107,29 @@ function enterLetters() {
     }
     rowIndex++
   } else if (rowIndex === 5) {
+    for (i=0; i < 5; i++) {
+      if (currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text() === randomWordSplit[i]) {
+        currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(55, 180, 85)","color":"white"});
+        var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
+        $(letter).css({"background-color":"rgb(55, 180, 85)","color":"white"});
+      } else if (randomWordSplit.includes(currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text()) === true) {
+        currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(250, 110, 50)","color":"white"});
+        var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
+        var currentColor = document.querySelector(letter).style.backgroundColor;
+        if (currentColor !== "rgb(55, 180, 85)") {
+          $(letter).css({"background-color":"rgb(250, 110, 50)","color":"white"});
+        }
+      } else {
+        currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(70, 70, 70)","color":"white"});
+        var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
+        var currentColor = document.querySelector(letter).style.backgroundColor;
+        if (currentColor !== "rgb(55, 180, 85)") {
+          if (currentColor !== "rgb(250, 110, 50)") {
+            $(letter).css({"background-color":"rgb(70, 70, 70)","color":"white"});
+          }
+        }
+      }
+    }
     winCheck(0);
   }
 }
