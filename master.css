@@ -522,10 +522,12 @@
 
 .button-normal-blue:hover {
   background: rgba(30,100,205,1);
+  text-decoration: none;
 }
 
 .button-normal-blue:active {
   background: rgba(40,110,215,1);
+  text-decoration: none;
 }
 .button-normal-red {
   display: inline-block;
@@ -542,10 +544,12 @@
 
 .button-normal-red:hover {
   background: rgba(200,35,35,1);
+  text-decoration: none;
 }
 
 .button-normal-red:active {
   background: rgba(210,45,45,1);
+  text-decoration: none;
 }
 .button-normal-green {
   display: inline-block;
@@ -562,10 +566,12 @@
 
 .button-normal-green:hover {
   background: rgba(45,170,75,1);
+  text-decoration: none;
 }
 
 .button-normal-green:active {
   background: rgba(55,180,85,1);
+  text-decoration: none;
 }
 
 .button-outline-blue {
@@ -582,9 +588,11 @@
 }
 .button-outline-blue:hover {
   background: rgba(237,237,237,1);
+  text-decoration: none;
 }
 .button-outline-blue:active {
   background: rgba(247,247,247,1);
+  text-decoration: none;
 }
 
 .button-outline-red {
@@ -601,9 +609,11 @@
 }
 .button-outline-red:hover {
   background: rgba(237,237,237,1);
+  text-decoration: none;
 }
 .button-outline-red:active {
   background: rgba(247,247,247,1);
+  text-decoration: none;
 }
 .button-outline-green {
   display: inline-block;
@@ -619,9 +629,11 @@
 }
 .button-outline-green:hover {
   background: rgba(237,237,237,1);
+  text-decoration: none;
 }
 .button-outline-green:active {
   background: rgba(247,247,247,1);
+  text-decoration: none;
 }
 .button-outline-dark {
   display: inline-block;
@@ -637,9 +649,11 @@
 }
 .button-outline-dark:hover {
   background: rgba(237,237,237,1);
+  text-decoration: none;
 }
 .button-outline-dark:active {
   background: rgba(247,247,247,1);
+  text-decoration: none;
 }
 
 
