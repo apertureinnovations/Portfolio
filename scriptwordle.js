@@ -107,8 +107,8 @@ function enterLetters() {
     }
     rowIndex++
   } else if (rowIndex === 5) {
+    var winCount = 0;
     for (i=0; i < 5; i++) {
-      var winCount = 0;
       if (currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text() === randomWordSplit[i]) {
         currentTableState.find("tr").eq(rowIndex).find("td").eq(i).css({"background-color":"rgb(55, 180, 85)","color":"white"});
         var letter = ".letter" + currentTableState.find("tr").eq(rowIndex).find("td").eq(i).text();
