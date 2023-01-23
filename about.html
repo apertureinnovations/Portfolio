@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Aperture Innovations</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+
+
+    <div class="navNavbar">
+      <a class="navNavItem navActive" href="index.html">Home</a>
+
+      <div class="navNavGroup checkDisplay">
+        <a class="navNavItem" href="skills.html">Skills</a>
+        <a class="navNavItem" href="about.html">About</a>
+        <a class="navNavItem" href="extras.html">Extras</a>
+      </div>
+
+      <a class="navHide navHamBurger"><i class="fa fa-bars"></i></a>
+    </div>
+
+    <div class="box-normal margin-five margin-zero-t back-light border-radius border-notop-radius font-two">
+      <div class="flex-grid-row">
+        <div class="flex-size-one box-normal margin-one margin-zero-b border-radius text-dark  align-center">
+          <h2>About Me:</h2>
+          <hr class="back-dark">
+        </div>
+      </div>
+      <div class="flex-grid-row">
+        <div class=" small-two flex-size-one box-normal margin-one border-radius back-red text-light align-center redShadowBottomRight">
+          <img src="profile.png" class="img-fluid img-thumb border-radius-extreme back-light">
+          <p></p>
+          <p>I'm Jake, a Front-End Developer located in the UK, working to better my skills in the pursuit of becoming the best at what i do.</p>
+        </div>
+
+        <div class="flex-size-two box-normal margin-one border-radius back-blue text-light align-center blueShadowBottomRight">
+          <h3>Interests</h3>
+          <hr class="back-light">
+          <p>I am a keen reader who loves Maths, Science and Programming. I have a strong interest in Warhammer 40k, and i like to play strategy games, to hone my logical thinking. I'm currently studying Maths, Further Maths, Physics and Computer Science at A level, leading into a path at university taking a Major in Alternative Energy and a Minor in Theoretical Programming.</p>
+        </div>
+      </div>
+
+      <h2 class="align-center font-two">Any Questions? Drop an Email!</h2>
+      <form>
+        <div class="form-group">
+          <label for="userEmail">Email address</label>
+          <input type="email" name="userEmailAddr" class="form-control" id="userEmail" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="userEmailCont">Email Contents:</label>
+          <textarea class="form-control" name="userEmailContents" id="userEmailCont" rows="3"></textarea>
+        </div>
+        <input id="popuperror" type="submit" class="wide-lr-padding button-normal-blue text-light" name="send" value="Submit">
+      </form>
+    </div>
+
+    <div class="footerContainer">
+      <hr class="back-dark">
+      <div class="footerItems">
+        <p class="textButton" onclick="showSources()">Sources</p>
+        <p class="textButton" onclick="backToTop()">Back to Top</p>
+      </div>
+      <div id="sources" class="align-left sources">
+        <a class="textButton" href="https://api.jquery.com/">jQuery</a>
+        <p></p>
+        <a class="textButton padding-five-b" href="https://getbootstrap.com/">Bootstrap</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scriptabout.js"></script>
+  </body>
+
+</html>
